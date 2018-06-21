@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="607.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlayGroundController">
+   <children>
+      <ImageView fitHeight="607.5" fitWidth="1080.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@gamePlay.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="txtPlayerOnePoints" fill="#ffea00" layoutX="475.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="78.13671875">
+         <font>
+            <Font name="Segoe UI Bold Italic" size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtPlayerOneHints" fill="#ffea00" layoutX="680.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="78.13671875">
+         <font>
+            <Font name="Segoe UI Bold Italic" size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtPlayerTwoPoints" fill="#ffea00" layoutX="475.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="78.13671875">
+         <font>
+            <Font name="Segoe UI Bold Italic" size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtPlayerTwoHints" fill="#ffea00" layoutX="680.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="78.13671875">
+         <font>
+            <Font name="Segoe UI Bold Italic" size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtPlayerTwoName" fill="WHITE" layoutX="314.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 2" textAlignment="CENTER" wrappingWidth="129.13671875">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtPlayerOneName" fill="WHITE" layoutX="189.0" layoutY="555.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 1" textAlignment="CENTER" wrappingWidth="129.13671255111694">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <ChoiceBox fx:id="listConsonants" layoutX="515.0" layoutY="466.0" prefHeight="25.0" prefWidth="100.0" />
+      <ChoiceBox fx:id="listVowels" layoutX="645.0" layoutY="466.0" prefHeight="25.0" prefWidth="100.0" />
+      <Button fx:id="btnSubmit" layoutX="880.0" layoutY="539.0" mnemonicParsing="false" onAction="#submit" prefHeight="38.0" prefWidth="163.0" style="-fx-background-color: #ffe400;" text="Submit">
+         <font>
+            <Font name="Segoe UI Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnGenerate" layoutX="880.0" layoutY="539.0" mnemonicParsing="false" onAction="#generateLetters" prefHeight="38.0" prefWidth="163.0" style="-fx-background-color: #41030c;" text="Generate" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Text fx:id="txtTimer" fill="WHITE" layoutX="475.0" layoutY="310.0" lineSpacing="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="04:37" textAlignment="CENTER" wrappingWidth="141.13671875">
+         <font>
+            <Font name="Eras Bold ITC" size="47.0" />
+         </font>
+      </Text>
+      <Button fx:id="btnStartGamePlay" layoutX="432.0" layoutY="250.0" mnemonicParsing="false" onAction="#startGamePlay" prefHeight="85.0" prefWidth="227.0" style="-fx-background-color: #41030c;" text="Start" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Eras Bold ITC" size="36.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="36.0" layoutY="558.0" mnemonicParsing="false" onAction="#backAction" prefHeight="37.0" prefWidth="37.0" style="-fx-background-color: rgba(0,0,0,0);">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Pane layoutX="462.0" layoutY="27.0" prefHeight="59.0" prefWidth="40.0">
+         <children>
+            <ImageView fitHeight="59.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@yellow-card.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="txtSL_1_P_Player_2" fill="WHITE" layoutX="27.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="12.640625">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtSL_1_Player_2" layoutX="3.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" textAlignment="CENTER" wrappingWidth="33.98046875">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="523.0" layoutY="27.0" prefHeight="59.0" prefWidth="40.0">
+         <children>
+            <ImageView fitHeight="59.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@yellow-card.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="txtSL_2_P_Player_2" fill="WHITE" layoutX="27.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="12.640625">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtSL_2_Player_2" layoutX="3.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" textAlignment="CENTER" wrappingWidth="33.98046875">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="337.0" layoutY="438.0" prefHeight="59.0" prefWidth="40.0">
+         <children>
+            <ImageView fitHeight="59.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@yellow-card.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="txtSL_1_P_Player_1" fill="WHITE" layoutX="27.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="12.640625">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtSL_1_Player_1" layoutX="3.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" textAlignment="CENTER" wrappingWidth="33.98046875">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="398.0" layoutY="438.0" prefHeight="59.0" prefWidth="40.0">
+         <children>
+            <ImageView fitHeight="59.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@yellow-card.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="txtSL_2_P_Player_1" fill="WHITE" layoutX="27.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="12.640625">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtSL_2_Player_1" layoutX="3.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" textAlignment="CENTER" wrappingWidth="33.98046875">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="337.0" layoutY="506.0" prefHeight="59.0" prefWidth="40.0">
+         <children>
+            <ImageView fitHeight="59.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@black-card.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="txtL_P_1" layoutX="27.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="12.640625">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtL_1" layoutX="3.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="33.98046875">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="382.0" layoutY="506.0" prefHeight="59.0" prefWidth="40.0">
+         <children>
+            <ImageView fitHeight="59.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@black-card.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="txtL_P_2" layoutX="27.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="12.640625">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtL_2" layoutX="3.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="33.98046875">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="427.0" layoutY="506.0" prefHeight="59.0" prefWidth="40.0">
+         <children>
+            <ImageView fitHeight="59.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@black-card.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="txtL_P_3" layoutX="27.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="12.640625">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtL_3" layoutX="3.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="33.98046875">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="472.0" layoutY="506.0" prefHeight="59.0" prefWidth="40.0">
+         <children>
+            <ImageView fitHeight="59.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@black-card.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="txtL_P_4" layoutX="27.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="12.640625">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtL_4" layoutX="3.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="33.98046875">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="517.0" layoutY="506.0" prefHeight="59.0" prefWidth="40.0">
+         <children>
+            <ImageView fitHeight="59.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@black-card.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="txtL_P_5" layoutX="27.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="12.640625">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtL_5" layoutX="3.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="33.98046875">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="562.0" layoutY="506.0" prefHeight="59.0" prefWidth="40.0">
+         <children>
+            <ImageView fitHeight="59.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@black-card.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="txtL_P_6" layoutX="27.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="12.640625">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtL_6" layoutX="3.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="33.98046875">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="607.0" layoutY="506.0" prefHeight="59.0" prefWidth="40.0">
+         <children>
+            <ImageView fitHeight="59.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@black-card.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="txtL_P_7" layoutX="27.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="12.640625">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtL_7" layoutX="3.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="33.98046875">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="652.0" layoutY="506.0" prefHeight="59.0" prefWidth="40.0">
+         <children>
+            <ImageView fitHeight="59.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@black-card.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="txtL_P_8" layoutX="27.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="12.640625">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtL_8" layoutX="3.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="33.98046875">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="697.0" layoutY="506.0" prefHeight="59.0" prefWidth="40.0">
+         <children>
+            <ImageView fitHeight="59.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@black-card.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="txtL_P_9" layoutX="27.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="12.640625">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtL_9" layoutX="3.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="33.98046875">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="742.0" layoutY="506.0" prefHeight="59.0" prefWidth="40.0">
+         <children>
+            <ImageView fitHeight="59.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@black-card.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="txtL_P_10" layoutX="27.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="12.640625">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Text fx:id="txtL_10" layoutX="3.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="33.98046875">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <TextField fx:id="txtInputText" layoutX="359.0" layoutY="574.0" prefHeight="30.0" prefWidth="385.0" promptText="Enter Longest Word">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Text fill="WHITE" layoutX="482.0" layoutY="368.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Round :" wrappingWidth="78.13672062009573">
+         <font>
+            <Font name="Eras Bold ITC" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtRoundNo" fill="#ffe100" layoutX="568.0" layoutY="368.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" textAlignment="CENTER" wrappingWidth="25.13671875">
+         <font>
+            <Font name="Eras Bold ITC" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtPlayerTwoWord" layoutX="533.0" layoutY="126.0" lineSpacing="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" textAlignment="CENTER" wrappingWidth="250.13671875">
+         <font>
+            <Font name="Segoe UI" size="20.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="584.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Round :">
+         <font>
+            <Font name="Eras Bold ITC" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtPlayerTowRound" fill="WHITE" layoutX="744.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-">
+         <font>
+            <Font name="Eras Bold ITC" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="584.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rival`s">
+         <font>
+            <Font name="Eras Bold ITC" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#4a4a4a" layoutX="470.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Previous Round" wrappingWidth="63.0000002682209" />
+      <Pane layoutX="898.0" layoutY="29.0" prefHeight="30.0" prefWidth="167.0">
+         <children>
+            <Text fx:id="txtLeaderBoard_1" fill="WHITE" layoutX="11.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="144.4394539296627" />
+         </children>
+      </Pane>
+      <Pane layoutX="899.0" layoutY="58.0" prefHeight="30.0" prefWidth="167.0">
+         <children>
+            <Text fx:id="txtLeaderBoard_2" fill="WHITE" layoutX="11.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="144.4394539296627" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

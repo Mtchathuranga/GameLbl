@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="607.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuController">
+   <children>
+      <ImageView fitHeight="607.5" fitWidth="1080.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@menu.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="166.0" layoutY="182.0" mnemonicParsing="false" onAction="#startTwoPlayer" prefHeight="246.0" prefWidth="237.0" style="-fx-background-color: rgba(0,0,0,0);">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="419.0" layoutY="182.0" mnemonicParsing="false" onAction="#startThreePlayer" prefHeight="246.0" prefWidth="237.0" style="-fx-background-color: rgba(0,0,0,0);">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="672.0" layoutY="182.0" mnemonicParsing="false" onAction="#startFourPlayer" prefHeight="246.0" prefWidth="237.0" style="-fx-background-color: rgba(0,0,0,0);">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="554.0" layoutY="535.0" mnemonicParsing="false" onAction="#ExitGame" prefHeight="41.0" prefWidth="209.0" style="-fx-background-color: rgba(0,0,0,0);">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Pane fx:id="pnlLoading" layoutY="-1.0" prefHeight="608.0" prefWidth="1080.0" style="-fx-background-color: rgba(0,0,0,0.5);">
+         <children>
+            <ImageView fitHeight="330.0" fitWidth="440.0" layoutX="320.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@clock-loading.gif" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
